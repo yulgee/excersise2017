@@ -451,6 +451,22 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            console.log('ready');
+            $('a[data-dismiss="modal"][data-toggle="modal"]').on('click', function () {
+                console.log('click');
+                var target = $(this).data('target');
+                console.log('target', target);
+                $(target).on('shown.bs.modal', function () {
+                    $('body').addClass('modal-open');
+                });
+            });
+            // < a href = "#" data - dismiss="modal" class="mr-auto" data - toggle="modal" data - target="#loginModal" > 已經有帳號了？</a >
+
+        })
+    </script>
 </body>
 
 </html>
