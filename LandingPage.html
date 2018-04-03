@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Hex Restaurant</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .btn {
+            border-width: 2px;
+        }
+
+        .form-control {
+            border-width: 2px;
+        }
+
+        .header-carousel-item {
+            height: 450px;
+        }
+
+        .bg-cover {
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, .6)
+        }
+
+        .bg-hex {
+            background-color: #17a2b8;
+        }
+
+        .text-hex {
+            color: #17a2b8;
+        }
+
+        .form-check-input {
+            margin-left: 0;
+        }
+
+        @media (min-width: 768px) {
+            .text-md-dark {
+                color: #333;
+            }
+        }
+
+
+        body {
+            font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", DFKai-SB, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="social-media">
+        <div class="bg-secondary py-1">
+            <div class="container text-right">
+                <a href="#">
+                    <i class="fa fa-twitter-square text-light" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-facebook-official text-light" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="image/logo_h.svg" width="125" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">首頁
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            美味菜單
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">義大利麵 Pasta</a>
+                            <a class="dropdown-item" href="#">燉飯 Rissoto</a>
+                            <a class="dropdown-item" href="#">排餐 Main Course</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <a href="#" class="btn btn-sm btn-outline-primary mr-2" data-toggle="modal" data-target="#loginModal">登入</a>
+                    <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#registerModal">註冊</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item header-carousel-item bg-cover active" style="background-image: url(https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&w=1885&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D)">
+                    <div class="carousel-caption px-2 d-none d-md-block">
+                        <h3>青醬焗義式肉丸</h3>
+                        <p>一般義大利麵會有幾種醬料。奶麵白醬，由奶油、麵粉和水，通常還會再加濃郁的鮮奶油，一看就知道是高脂肪的東西。
+                            <br>青醬由新鮮羅勒葉或九層塔，看到這裡會覺得青醬應該相對低熱量，其實青醬相對健康，但熱量也不低。</p>
+                    </div>
+                </div>
+                <div class="carousel-item header-carousel-item bg-cover" style="background-image: url(https://images.unsplash.com/photo-1493807879848-13f1500cee7f?auto=format&fit=crop&w=1050&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D)">
+                    <div class="carousel-caption px-2 d-none d-md-block">
+                        <h3>核桃塔</h3>
+                        <p>用核桃、蔓越莓多種核果配料，搭上香脆的底層餅乾塔皮，奶香濃厚，鬆脆可口不甜膩。</p>
+                    </div>
+
+                </div>
+                <div class="carousel-item header-carousel-item bg-cover" style="background-image: url(https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1050&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D)">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="py-5 bg-hex text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex">
+                    <div class="mr-3">
+                        <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-weight-bold">六角美式餐廳</h4>
+                        <p>提供道地的美式食物、特色調酒飲品與真正的個性化服務。不論你是與家人朋友聯繫感情；還是尋求週末般的解放，六角提供最完美的休閒場所。</p>
+                    </div>
+                </div>
+                <div class="d-flex col-md-4">
+                    <div class="mr-3">
+                        <i class="fa fa-coffee fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-weight-bold">六角咖啡</h4>
+                        <p>咖啡是採用經過烘焙過程的咖啡豆所製作沖泡出來的飲料。咖啡是人類社會流行範圍最為廣泛的飲料之一，也是重要經濟作物。 咖啡樹原產於非洲亞熱帶地區。</p>
+                    </div>
+                </div>
+                <div class="d-flex col-md-4">
+                    <div class="mr-3">
+                        <i class="fa fa-birthday-cake fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-weight-bold">美式蛋糕</h4>
+                        <p>蛋糕是一種糕點，通常是甜的，典型的蛋糕是以烤的方式製作出來。在某些傳統中，新娘和新郎是第一個吃結婚蛋糕的，並常常用手指挖一塊蛋糕互相送到對方嘴巴裡。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid py-5 bg-light text-white" style="position: relative">
+        <div class="row">
+            <div class="col-md-4 bg-cover" style="
+                position: absolute; top: 0; bottom: 0;
+                background-image:url(https://images.unsplash.com/photo-1484924972457-c7f191b5d087?auto=format&fit=crop&w=1343&q=80)"></div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-end text-md-dark">
+                <div class="col-md-8">
+                    <h4 class="font-weight-bold">你也有廚師夢？</h4>
+                    <p>每個有志成為廚師的人，都有不同的起因與夢想，但是有許多人並未真的了解廚房工作是怎麼一回事，就貿然踏入，然後瞬間被擊敗，你，真的搞清楚了嗎？</p>
+                    <div class="btn btn-outline-info">more</div>
+                    <div class="row pt-3">
+                        <div class="col-md-6">
+                            <h5 class="font-weight-bold">你知道廚師的工作時數嗎？</h5>
+                            <p>而在工時的部分可能是這樣的：即使是你工時最短的日子，也比一般上班族工時最長的日子更長；而常態性的長工時日，或許會比一般人醒著的時間還長。因此你可能永遠睡不飽，而比起家人或朋友，你更常和同事相處在一起。</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="font-weight-bold">被列為世界上最辛苦的工作之一</h5>
+                            <p>廚房持續性的高壓，容易產生情緒與生理上的傷害，你的脾氣有可能會變得起伏不定，或比以前更愛飆髒話。手上可能總有新傷，體重不是過輕就是過重，你的腿可能要壞了，手跟肩背也差不多了。 咖啡樹原產於非洲亞熱帶地區。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 bg-hex">
+        <div class="container text-light">
+            <h2 class="text-center font-weight-bold"> 飲食觀點 OPINIONS </h2>
+            <div class="row pt-4">
+                <div class="col-md-6 d-flex">
+                    <div class="mr-3">
+                        <i class="fa fa-coffee fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-weight-bold">傳奇名廚有話要說</h4>
+                        <p>美國名廚曾說，要做出美味的料理，首要條件就是快樂。 吃的時候也要開開心心，並分享食物給家人朋友，否則會消化不良。我同意她說的話，如果情緒緊繃又生氣，是不能好好享受食物的。 咖啡樹原產於非洲亞熱帶地區。</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex">
+                    <div class="mr-3">
+                        <i class="fa fa-coffee fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-weight-bold">傳奇名廚有話要說</h4>
+                        <p>美國名廚曾說，要做出美味的料理，首要條件就是快樂。 吃的時候也要開開心心，並分享食物給家人朋友，否則會消化不良。我同意她說的話，如果情緒緊繃又生氣，是不能好好享受食物的。 咖啡樹原產於非洲亞熱帶地區。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid py-5 bg-light text-white" style="position: relative">
+        <div class="row">
+            <div class="col-md-4 bg-cover" style="position:absolute; top:0; bottom:0; right:0; background-image:url(https://images.unsplash.com/photo-1488992783499-418eb1f62d08?ixlib=rb-0.3.5&s=5f27dfbfef09412543643251160cfa7a&auto=format&fit=crop&w=1706&q=80)"></div>
+        </div>
+        <div class="container">
+            <div class="row text-md-dark">
+                <div class="col-md-8">
+                    <h4 class="font-weight-bold">讓快樂持續發生</h4>
+                    <p>在每個機會裡，但現在這些亞洲父母來了，懷疑自己是否重要，到底你自己的感覺是什麼。</p>
+                    <dl class="row">
+                        <dt class="col-md-3">不吃飽
+                            <br>哪有力氣減肥啊？</dt>
+                        <dd class="col-md-9">邊，是貝德花芬是槐格納你就愛，再也不出聲不鬧：并且你有的是可驚的口味，不能怨，我見著的只你。</dd>
+                        <dt class="col-md-3">愛你，愛你，
+                            <br>我們真的羡慕</dt>
+                        <dd class="col-md-9">錢立地就成富豪勢力家，他叩了不少下頭，和別的其餘的一日，是怎樣生竟不如其死？我，愛你，愛你，我們真的羡慕，我猜想，卻沒有同樣的碎痕，雪西裡與普陀山，沒福見著你的父親，想中止也不可能。</dd>
+                        <dt class="col-md-3">我再來歐洲你已經早</dt>
+                        <dd class="col-md-9">這才覺著父性的愛像泉眼似的在性靈裏汩汩的流出：只可惜是遲了，講給我聽你得小提琴的故事：怎樣那晚上買琴來的時候你已經在你的小床上睡好。</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3614.453946422894!2d121.5225926109832!3d25.052598834648016!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdbc6e199179cced8!2z56i756a-54OP6b6N6bq1IEluYWth!5e0!3m2!1szh-TW!2stw!4v1515487520673"
+                        width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="col-md-6">
+                    <form action="" id="needs-validation" novalidate>
+                        <div class="form-group">
+                            <label for="username">姓名*</label>
+                            <input type="text" class="form-control" id="username" placeholder="請輸入姓名" required>
+                            <div class="invalid-feedback">
+                                請輸入正確姓名
+                            </div>
+                            <label for="phonenumber" class="pt-3">電話號碼*</label>
+                            <input type="tel" class="form-control" id="phonenumber" placeholder="請輸入電話號碼" required>
+                            <div class="invalid-feedback">
+                                請輸入正確號碼
+                            </div>
+                            <label for="email" class="pt-3">EMAL*</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                            <div class="invalid-feedback">
+                                請輸入正確EMAIL
+                            </div>
+                            <label for="people" class="pt-3">人數*</label>
+                            <input type="number" class="form-control" id="people" placeholder="1" required>
+                            <div class="invalid-feedback">
+                                請輸入正確人數
+                            </div>
+                            <div class="custom-control custom-radio mt-3">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <label class="custom-control-label" for="customRadio1">素食</label>
+                            </div>
+                            <div class="custom-control custom-radio mt-3">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <label class="custom-control-label" for="customRadio2">葷食</label>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-secondary">取消</button>
+                            <button type="submit" class="btn btn-info">送出</button>
+                        </div>
+                    </form>
+                    <script>
+                        // Example starter JavaScript for disabling form submissions if there are invalid fields
+                        (function () {
+                            'use strict';
+
+                            window.addEventListener('load', function () {
+                                var form = document.getElementById('needs-validation');
+                                form.addEventListener('submit', function (event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            }, false);
+                        })();
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 bg-cover p-5 text-light" style="background-image:url(https://images.unsplash.com/photo-1491185841098-9ce20f966624?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f83a8cf7b92564946950e478c9606e4f&auto=format&fit=crop&w=1778&q=80)">
+                <div class="row">
+                    <div class="col-md-8">
+                        <small>加入我們</small>
+                        <h4>你便乖乖的把琴抱進你的床去，
+                            <br>你是不認識你父親的</h4>
+                        <p class="text-justify">短暫的激情是不值錢的，年代的人還需要摔打，別人一定會聽你，但它只是一環，80年代的人不要跟70年代，別人可以拷貝我的模式，一個成功的創業者，東西得一點點幹，也要注重過程， 千萬別告訴別人，賺錢模式越多越說明你沒有模式。
+                        </p>
+                        <a href="#" class="btn btn-outline-warning">加入我們</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 bg-cover p-5 text-light" style="background-image:url(https://images.unsplash.com/photo-1504400739660-22ebeb14f00a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3811ba1706c8394ed8ee19adb30e53a3&auto=format&fit=crop&w=1950&q=80)">
+                <div class="row">
+                    <div class="col-md-8">
+                        <small>品嚐佳餚</small>
+                        <h4>踏著浪，我和世界不一樣，太多堅持</h4>
+                        <p class="text-justify">一度剝落了的青春，寂寞的床偌大的房，我和我的倔強不能在shopping時候想你在路上會­遇見怎樣的穹蒼？戀人之間的時光，怎麼又是你，都騎虎難下了，唉呀，環境維護的話，發牢騷之前，打架了，大家不要吵架，我再也不逃了，我們回去了，謝謝，最恐怖的人，既然媽媽決定了，就算是死，辣辣的，一定很好吃。
+                        </p>
+                        <a href="#" class="btn btn-outline-warning">品嚐佳餚</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-5">
+        <div class="container">
+            <ul class="list-inline">
+                <li class="list-inline-item text-secondary">© Copright 2017 六角學院</li>
+                <li class="list-inline-item">
+                    <a href="#">Github</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">Twitter</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">About</a>
+                </li>
+
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Modallogin -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-light">
+                    <h5 class="modal-title" id="exampleModalLabel">登入</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="loginemail">信箱</label>
+                            <input type="email" class="form-control" aria-describedby="emailHelp" id="loginemail" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">
+                                我們絕不會隨意將您的email給予第三者
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword5">密碼</label>
+                            <input type="password" id="inputPassword5" class="form-control" placeholder="Enter password" aria-describedby="passwordHelpBlock">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="remember">
+                            <label class="form-check-label" for="remember">記住帳號</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" data-dismiss="modal" class="mr-auto" data-toggle="modal" data-target="#registerModal">切換到註冊</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modalregister -->
+    <div class="modal fade bd-example-lg" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-light">
+                    <h5 class="modal-title" id="exampleModalLabel">註冊服務</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 text-secondary">
+                            <h4 class="font-weight-bold">註冊六角西餐廳</h4>
+                            <p>遇到這些灰色道德地帶時，要到兩三年後才會比較有清楚的感受，而這正是為什麼西方公司會存活，作為一個年輕人，但是負責的人需要接受風險、喜歡冒險和願意負責。2，流感病毒攻心，春電展將開展，NBA明星周，低價電信資費戰，曼城主場連勝。</p>
+                        </div>
+                        <div class="col-md-6">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">信箱</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="emailHelp" class="form-text text-muted">我們絕不會隨意將您的email給予第三者</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">密碼</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkpassword">確認密碼</label>
+                                    <input type="password" class="form-control" id="checkpassword" placeholder="Password">
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="agree">
+                                    <label class="form-check-label" for="agree">同意條款</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" data-dismiss="modal" class="mr-auto" data-toggle="modal" data-target="#loginModal">已經有帳號了？</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
